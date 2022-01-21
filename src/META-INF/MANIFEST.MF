@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Main-Class: cn.getfei.core.Task
+Class-Path: jcl-over-slf4j-1.7.25.jar animal-sniffer-annotations-1.14.ja
+ r checker-compat-qual-2.0.0.jar bcprov-jdk15on-1.58.jar j2objc-annotati
+ ons-1.1.jar selenium-java-3.141.59.jar browsermob-core-2.1.5.jar easyoc
+ r-3.0.4-RELEASE.jar jackson-core-2.8.9.jar selenium-api-3.141.59.jar js
+ r305-1.3.9.jar selenium-firefox-driver-3.141.59.jar selenium-safari-dri
+ ver-3.141.59.jar bcpkix-jdk15on-1.58.jar byte-buddy-1.8.15.jar dnsjava-
+ 2.1.8.jar selenium-ie-driver-3.141.59.jar guava-25.0-jre.jar selenium-s
+ upport-3.141.59.jar selenium-edge-driver-3.141.59.jar okhttp-3.11.0.jar
+  commons-lang3-3.5.jar selenium-opera-driver-3.141.59.jar selenium-chro
+ me-driver-3.141.59.jar jackson-annotations-2.8.9.jar littleproxy-1.1.0-
+ beta-bmp-17.jar netty-all-4.0.51.Final.jar slf4j-api-1.7.25.jar seleniu
+ m-remote-driver-3.141.59.jar okio-1.14.0.jar mitm-2.1.5.jar jackson-dat
+ abind-2.8.9.jar commons-exec-1.3.jar jzlib-1.1.3.jar error_prone_annota
+ tions-2.1.3.jar
+
