@@ -12,7 +12,7 @@ import cn.easyproject.easyocr.ImageType;
 public class EasyOCRUtils {
 
     public static EasyOCR getEisOcr(){
-        String tesseractPath = "D:/Program Files/Tesseract-OCR/tesseract";
+        String tesseractPath = "D:/Program Files (x86)/Tesseract-OCR/tesseract";
 //        String imgUrl1 = "res/img/img_NORMAL.jpg";
         String imgUrl1 = "res/img/1.png";
 //        String imgUrl2 = "res/img/img_INTERFERENCE_LINE.png";

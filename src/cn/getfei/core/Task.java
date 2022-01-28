@@ -27,7 +27,6 @@ import java.util.logging.Logger;
  * @Version:1.0
  */
 public class Task {
-
     /**
      * 默认隐式等待秒数
      */
@@ -35,15 +34,15 @@ public class Task {
     /**
      * 默认工时
      */
-    public static final int DEFAULT_ONE_DAY_MAN_HOURS = 7;
+    public static final int DEFAULT_ONE_DAY_MAN_HOURS = 8;
 
     private WebDriver driver;
 
     private static final String URL = "http://eis.ffcs.cn/irj/servlet/prt/portal/prtroot/com.sap.portal.navigation.portallauncher.default";
 
-    private static final String CHROME_DRIVER_PATH = "D:/web-driver/chromedriver.exe";
+    private static final String CHROME_DRIVER_PATH = "D:\\DevelopTools\\chromedriver\\chromedriver.exe";
 
-    private static final String TMP_DIR = "C:\\assitant\\before\\";
+    private static final String TMP_DIR = "D:\\Work\\ideas\\ffcsAssistant\\res\\img\\before\\";
 //    private static final String TMP_DIR = "res/img/after/";
 //    private static final String VERIFICATION_CODE_IMG_BEFORE_PATH = "res/img/before/";
     private static final String VERIFICATION_CODE_IMG_BEFORE_PATH = TMP_DIR;
@@ -97,9 +96,9 @@ public class Task {
 
     public boolean login() {
         //填写表单
-        String username = "zhengf";
+        String username = "os.wangh";
         driver.findElement(By.name("j_user")).sendKeys(username);
-        String password = "ffcs@12345";
+        String password = "FFcs@1234";
         driver.findElement(By.name("j_password")).sendKeys(password);
         int count = 0;
         WebElement imgVerificationCode = driver.findElement(By.xpath("//img[@src='http://bem.ffcs.cn:81/mis/Images.aspx']"));
@@ -133,7 +132,8 @@ public class Task {
                 inputVerificationCode.clear();
                 inputVerificationCode.sendKeys(verificationCode);
                 //点击登录
-                driver.findElement(By.xpath("//img[@src='/irj/portalapps/com.ffcs.portal.runtime.logon/layout\\loading_l.png']")).click();
+//                WebElement element = driver.findElement(By.xpath("//img[@src='/irj/portalapps/com.ffcs.portal.runtime.logon/layout\\loading_l.png']"));
+//                element.click();
                 //alert
                 if (SeleniumUtils.isAlertPresent(driver)) {
                     Alert alert = driver.switchTo().alert();
@@ -198,8 +198,9 @@ public class Task {
         }
     }
 
-    private void switchToIbIframe() {
-        SeleniumUtils.switchToIframe(driver, "ivuFrm_page0ivu0", "EISBottom", "iLeftIframe");
+    private void switchToIbIframe() {//                     ivuFrm_page0ivu0
+        //SeleniumUtils.switchToIframe(driver, "ivuFrm_page0ivu0", "EISBottom", "iLeftIframe");
+        SeleniumUtils.switchToIframe(driver, "ivuFrm_page0ivu0");
     }
 
     public static void main(String[] args) {
@@ -209,8 +210,8 @@ public class Task {
             if (!loginSuccess) {
                 return;
             }
-        task.toWork();
-//        task.getOffWork();
+//        task.toWork();
+        task.getOffWork();
         } catch (Exception e) {
             e.printStackTrace();
             StringWriter sw = new StringWriter();
